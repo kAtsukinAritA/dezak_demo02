@@ -8,24 +8,26 @@
 
 
   <body>
-    <img src="images/nui.PNG" width="400" height="400">
-    <img id="images" onclick="slideshow1()" src="images/body01.PNG" wight="600" height="600">
+    <canvas id="concat" img src="images/nui.PNG" width="400" height="400"></canvas>
+<!--     <img src="images/nui.PNG" width="400" height="400"> -->
+    <img id="images" onclick="slideshow1()" src="images/body01.PNG" wight="250" height="250">
+    <img id="images" onclick="slideshow2()" src="images/leg01.PNG" wight="250" height="250">
       
       <section id="contents">
         <div class="flex-container">
           
-          <canvas id="images/nui.PNG"></canvas>
+<!--           <canvas id="images/nui.PNG"></canvas> -->
           
           <!-- 合成するcanvasその1 -->
-          <canvas id="images/body01.PNG" width="400" height="400"></canvas>
-          <div><img src="icon/plus-solid.svg" width="32" height="32"></div>
+<!--           <canvas id="images/body01.PNG" width="400" height="400"></canvas> -->
+<!--           <div><img src="icon/plus-solid.svg" width="32" height="32"></div> -->
 
           <!-- 合成するcanvasその2 -->
-          <canvas id="images/leg01.PNG" width="400" height="400"></canvas>
-          <p><button type="button" id="btn-concat"><img src="icon/equals-solid.svg" width="32" height="32"></button></p>
+<!--           <canvas id="images/leg01.PNG" width="400" height="400"></canvas> -->
+<!--           <p><button type="button" id="btn-concat"><img src="icon/equals-solid.svg" width="32" height="32"></button></p> -->
 
           <!-- 合成結果用のcanvas -->
-          <canvas id="concat" width="400" height="400"></canvas>
+<!--           <canvas id="concat" width="400" height="400"></canvas> -->
         </div>
 
         <!-- 消しゴム -->
@@ -41,7 +43,7 @@
       <script>
         window.onload = () => {
           // #image1に画像を描画
-          drawdrawImage1();
+          drawImage1();
 
           // #image2にテキストを描画
           drawImage2();
@@ -53,6 +55,16 @@
             function slideshow1(){
             document.querySelector("images/body01.PNG").addEventListener("click", ()=>{
             concatCanvas("#concat", ["images/nui.PNG", "images/body01.PNG"]);
+              
+            if (num == 1){
+              num - 0;
+            }
+            document.getElementById("images").src=pics_src[num];
+          }
+          
+           function slideshow2(){
+            document.querySelector("images/leg01.PNG").addEventListener("click", ()=>{
+            concatCanvas("#concat", ["images/nui.PNG", "images/leg01.PNG"]);
               
             if (num == 1){
               num - 0;
@@ -116,7 +128,7 @@
           const ctx = canvas.getContext("2d");
 
           for(let i=0; i<asset.length; i++){
-            const images/body01 = await getImagefromCanvas(asset[i]);
+            const "images/body01" = await getImagefromCanvas(asset[i]);
             ctx.drawImage("images/nui.PNG", 0, 0, canvas.width, canvas.height);
           }
         }
