@@ -8,8 +8,8 @@
 
 
   <body>
-    <canvas id="concat" img src="images/nui.PNG" width="400" height="400"></canvas>
-<!--     <img src="images/nui.PNG" width="400" height="400"> -->
+    <img src="images/nui.PNG" width="400" height="400">
+    <ul><canvas id="concat"="images/nui.PNG" width="400" height="400"></canvas></ul>
     <img id="images" onclick="slideshow1()" src="images/body01.PNG" wight="250" height="250">
     <img id="images" onclick="slideshow2()" src="images/leg01.PNG" wight="250" height="250">
       
@@ -19,11 +19,11 @@
 <!--           <canvas id="images/nui.PNG"></canvas> -->
           
           <!-- 合成するcanvasその1 -->
-<!--           <canvas id="images/body01.PNG" width="400" height="400"></canvas> -->
+          <canvas id="images/body01.PNG" width="400" height="400"></canvas>
 <!--           <div><img src="icon/plus-solid.svg" width="32" height="32"></div> -->
 
           <!-- 合成するcanvasその2 -->
-<!--           <canvas id="images/leg01.PNG" width="400" height="400"></canvas> -->
+          <canvas id="images/leg01.PNG" width="400" height="400"></canvas>
 <!--           <p><button type="button" id="btn-concat"><img src="icon/equals-solid.svg" width="32" height="32"></button></p> -->
 
           <!-- 合成結果用のcanvas -->
@@ -55,6 +55,7 @@
             function slideshow1(){
             document.querySelector("images/body01.PNG").addEventListener("click", ()=>{
             concatCanvas("#concat", ["images/nui.PNG", "images/body01.PNG"]);
+            });
               
             if (num == 1){
               num - 0;
@@ -62,16 +63,18 @@
             document.getElementById("images").src=pics_src[num];
           }
           
+          
            function slideshow2(){
             document.querySelector("images/leg01.PNG").addEventListener("click", ()=>{
             concatCanvas("#concat", ["images/nui.PNG", "images/leg01.PNG"]);
+            });
               
             if (num == 1){
               num - 0;
             }
             document.getElementById("images").src=pics_src[num];
           }
-          });
+          
           
 //           function slideshow1(){
 //             document.querySelector("images/body01.PNG").addEventListener("click", ()=>{
