@@ -15,6 +15,16 @@
     var background = new image();
       background.src = "images/nui.PNG";
     
+    var canvas_width = 400;
+    var canvas_height = 400;
+    background.onload = function(){
+    cxt.drawImage(background,0,0,canvas_width, background.height * canvas_width / background.width);
+    }
+    
+    
+    
+    
+    
     <img id="images" onclick="slideshow1()" src="images/body01.PNG" wight="250" height="250">
     <img id="images" onclick="slideshow2()" src="images/leg01.PNG" wight="250" height="250">
       
