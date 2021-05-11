@@ -12,8 +12,11 @@
       
       <section id="contents">
         <div class="flex-container">
+          
+          <canvas id="images/nui.PNG"></canvas>
+          
           <!-- 合成するcanvasその1 -->
-          <canvas id="images/body01.PNG" width="400" height="400"></canvas>
+          <canvas id="images/body01.PNG" onclick="slideshow1()" width="400" height="400"></canvas>
           <div><img src="icon/plus-solid.svg" width="32" height="32"></div>
 
           <!-- 合成するcanvasその2 -->
@@ -43,9 +46,17 @@
           drawImage2();
 
           // 「+」ボタンを押したら合成
-          document.querySelector("#btn-concat").addEventListener("click", ()=>{
-            concatCanvas("#concat", ["#image1", "#image2"]);
+          document.querySelector("images/body01.PNG").addEventListener("click", ()=>{
+            concatCanvas("#concat", ["images/nui.PNG", "images/body01.PNG"]);
           });
+          
+          function slideshow1(){
+            if (num == 1){
+              num - 0;
+            }
+            document.getElementById("images").src=pics_src[num];
+          }
+          
 
           // 「消しゴム」ボタンを押したらクリア
           document.querySelector("#btn-eraser").addEventListener("click", ()=>{
