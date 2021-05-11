@@ -16,7 +16,7 @@
           <canvas id="images/nui.PNG"></canvas>
           
           <!-- 合成するcanvasその1 -->
-          <canvas id="images/body01.PNG" onclick="slideshow1()" width="400" height="400"></canvas>
+          <canvas id="images/body01.PNG" width="400" height="400"></canvas>
           <div><img src="icon/plus-solid.svg" width="32" height="32"></div>
 
           <!-- 合成するcanvasその2 -->
@@ -40,7 +40,7 @@
       <script>
         window.onload = () => {
           // #image1に画像を描画
-          drawImage1();
+          drawdrawImage1();
 
           // #image2にテキストを描画
           drawImage2();
@@ -70,9 +70,9 @@
          */
         function drawImage1(){
           const Unaju = new Image();
-          Unaju.src = "images/leg.png";
+          Unaju.src = "images/body01.PNG";
           Unaju.onload = () =>{
-            const canvas = document.querySelector("#images/body01.png");
+            const canvas = document.querySelector("#images/body01.PNG" onclick="slideshow1()");
             const ctx = canvas.getContext("2d");
             ctx.drawImage(Unaju, 0, 0, canvas.width, canvas.height);
           }
@@ -83,9 +83,9 @@
          */
         function drawImage2(){
         const Unaju = new Image();
-        Unaju.src = "images/body01.png";
+        Unaju.src = "images/leg01.PNG";
         Unaju.onload = () =>{
-          const canvas = document.querySelector("#images/leg01.png");
+          const canvas = document.querySelector("#images/leg01.PNG");
           const ctx = canvas.getContext("2d");
           ctx.drawImage(Unaju, 0, 0, canvas.width, canvas.height);
         }
@@ -103,7 +103,7 @@
 
           for(let i=0; i<asset.length; i++){
             const images/body01 = await getImagefromCanvas(asset[i]);
-            ctx.drawImage(images/body01, 0, 0, canvas.width, canvas.height);
+            ctx.drawImage("images/nui.PNG", 0, 0, canvas.width, canvas.height);
           }
         }
 
