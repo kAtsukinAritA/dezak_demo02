@@ -19,11 +19,11 @@
 <!--           <canvas id="images/nui.PNG"></canvas> -->
           
           <!-- 合成するcanvasその1 -->
-<!--           <canvas id="images/body01.PNG" width="400" height="400"></canvas> -->
+          <canvas id="images/body01.PNG" width="400" height="400"></canvas>
 <!--           <div><img src="icon/plus-solid.svg" width="32" height="32"></div> -->
 
           <!-- 合成するcanvasその2 -->
-<!--           <canvas id="images/leg01.PNG" width="400" height="400"></canvas> -->
+          <canvas id="images/leg01.PNG" width="400" height="400"></canvas>
 <!--           <p><button type="button" id="btn-concat"><img src="icon/equals-solid.svg" width="32" height="32"></button></p> -->
 
           <!-- 合成結果用のcanvas -->
@@ -97,7 +97,7 @@
           const Unaju = new Image();
           Unaju.src = "images/body01.PNG";
           Unaju.onload = () =>{
-            const canvas = document.querySelector("#images/body01.PNG");
+            const canvas = document.querySelector("images/body01.PNG");
             const ctx = canvas.getContext("2d");
             ctx.drawImage(Unaju, 0, 0, canvas.width, canvas.height);
           }
@@ -110,7 +110,7 @@
         const Unaju = new Image();
         Unaju.src = "images/leg01.PNG";
         Unaju.onload = () =>{
-          const canvas = document.querySelector("#images/leg01.PNG");
+          const canvas = document.querySelector("images/leg01.PNG");
           const ctx = canvas.getContext("2d");
           ctx.drawImage(Unaju, 0, 0, canvas.width, canvas.height);
         }
@@ -127,7 +127,7 @@
           const ctx = canvas.getContext("2d");
 
           for(let i=0; i<asset.length; i++){
-            const "images/body01" = await getImagefromCanvas(asset[i]);
+            const "images/body01.PNG" = await getImagefromCanvas(asset[i]);
             ctx.drawImage("images/nui.PNG", 0, 0, canvas.width, canvas.height);
           }
         }
