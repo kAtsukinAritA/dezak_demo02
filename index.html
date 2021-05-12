@@ -9,7 +9,7 @@
 
   <body>
     <canvas id= "#concat" width="400" height="400"></canvas>
-    <img id="images" src="images/nui.PNG" canvas id= "#concat">
+    <img id="images" src="images/nui.PNG" width="400" height="400" canvas id= "#concat">
     
     
     
@@ -57,12 +57,16 @@
           // 「+」ボタンを押したら合成
 //           document.querySelector("images/body01.PNG").addEventListener("click", ()=>{
 //             concatCanvas("#concat", ["images/nui.PNG", "images/body01.PNG"]);
+            
+            
+            var pics_src = new Array("images/body01.PNG","images/leg01.PNG");
+            var num = 0;
         
             function slideshow1(){
             var pics_src = document.querySelector("images/body01.PNG").addEventListener("click", ()=>{
             concatCanvas("#concat", ["images/nui.PNG", "images/body01.PNG"]);
             });
-            var num = 0;
+            
             if (num == 1){
               num - 0;
             }
