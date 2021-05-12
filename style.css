@@ -4,6 +4,7 @@ canvas{
 }
 concat{
   background-image : url("images/nui.PNG");
+/*   img src="images/nui.PNG"; */
 }
 button1{
   width: 200px;
