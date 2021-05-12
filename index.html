@@ -11,14 +11,14 @@
   <div class="flex-container">
 
     <!-- 合成結果用のcanvas -->
-    <canvas id="concat" img src="images/nui.PNG" width="200" height="200"></canvas>
+    <canvas id="concat" width="200" height="200"><img src="image/nui.PNG"></canvas>
     
     <!-- 合成するcanvasその1 -->
 <!--     <canvas id="image1" width="150" height="150"></canvas> -->
 <!--     <div><img src="icon/plus-solid.svg" width="32" height="32"></div> -->
 
     <!-- 合成するcanvasその2 -->
-    <button type="button1" id="btn-concat"><canvas id="#image2" width="150" height="150"></canvas></button>
+    <p button type="button1" id="btn-concat"><canvas id="#image2" width="150" height="150"></canvas></p>
 <!--     <p><button type="button" id="btn-concat"><img src="images/body01.PNG" width="100" height="100"></button></p> -->
   </div>
 
@@ -41,7 +41,7 @@ window.onload = () => {
 
   // 「+」ボタンを押したら合成
   document.querySelector("#btn-concat").addEventListener("click", ()=>{
-    concatCanvas("#concat", ["#image1","#image2"]);
+    concatCanvas("#concat", ["#image1", "#image2"]);
   });
 
   // 「消しゴム」ボタンを押したらクリア
