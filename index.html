@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CANVAS合成</title>
-  <link rel="stylesheet" href="style.css" type="text/css" media="images">
+  <link rel="stylesheet" href="style.css" type="text/css" media="all">
 </head>
 <body>
 
@@ -14,21 +14,21 @@
     <canvas id="concat" width="200" height="200"></canvas>
     
     <!-- 合成するcanvasその1 -->
-    <canvas id="images/nui.PNG" width="150" height="150"></canvas>
+    <canvas id="image1" width="150" height="150"></canvas>
 <!--     <div><img src="icon/plus-solid.svg" width="32" height="32"></div> -->
 
     <!-- 合成するcanvasその2 -->
-    <button type="button" id="btn-concat"><canvas id="images/body01.PNG" width="150" height="150"></canvas></button>
+    <button type="button" id="btn-concat"><canvas id="image2" width="150" height="150"></canvas></button>
 <!--     <p><button type="button" id="btn-concat"><img src="images/body01.PNG" width="100" height="100"></button></p> -->
   </div>
 
   <!-- 消しゴム -->
-  <p id="eraser"><button type="button" id="btn-eraser"><img src="icon/eraser-solid.svg" width="32" height="32"></button></p>
+  <p id="eraser"><button type="button" id="btn-eraser"><img src="images/eraser-solid.svg" width="32" height="32"></button></p>
 </section>
 
 <ul>
   <li>「＝」ボタンをクリックすると2つのcanvasを合成します</li>
-  <li>「<img src="icon/eraser-solid.svg" width="18" height="18">」ボタンをクリックすると合成結果をクリアします</li>
+  <li>「<img src="images/eraser-solid.svg" width="18" height="18">」ボタンをクリックすると合成結果をクリアします</li>
 </ul>
 
 <script>
@@ -41,7 +41,7 @@ window.onload = () => {
 
   // 「+」ボタンを押したら合成
   document.querySelector("#btn-concat").addEventListener("click", ()=>{
-    concatCanvas("#concat", ["images/nui.PNG", "images/body01.PNG"]);
+    concatCanvas("#concat", ["#image1", "#image2"]);
   });
 
   // 「消しゴム」ボタンを押したらクリア
@@ -58,7 +58,7 @@ function drawImage1(){
   const Nui = new Image();
   Unaju.src = "images/nui.PNG";
   Unaju.onload = () =>{
-    const canvas = document.querySelector("images/nui.PNG");
+    const canvas = document.querySelector("#image1");
     const ctx = canvas.getContext("2d");
     ctx.drawImage(Nui, 0, 0, canvas.width, canvas.height);
   }
@@ -71,7 +71,7 @@ function drawImage2(){
    const Body1 = new Image();
   Unaju.src = "images/body01.PNG";
   Unaju.onload = () =>{
-    const canvas = document.querySelector("#images/body01.PNG");
+    const canvas = document.querySelector("#image2");
     const ctx = canvas.getContext("2d");
     ctx.drawImage(Body1, 0, 0, canvas.width, canvas.height);
   }
