@@ -14,7 +14,7 @@
     <canvas id="concat" width="200" height="200"></canvas>
     
     <!-- 合成するcanvasその1 -->
-    <canvas id="image1" width="150" height="150"></canvas>
+    <canvas id="#image1" width="150" height="150"></canvas>
 <!--     <div><img src="icon/plus-solid.svg" width="32" height="32"></div> -->
 
     <!-- 合成するcanvasその2 -->
@@ -90,7 +90,7 @@ function drawImage2(){
 
   for(let i=0; i<asset.length; i++){
     const image1 = await getImagefromCanvas(asset[i]);
-    ctx.drawImage(#image1, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
   }
 }
 
