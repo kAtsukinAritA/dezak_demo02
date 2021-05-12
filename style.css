@@ -3,8 +3,8 @@ canvas{
   margin: 0px 10px 0px 10px;
 }
 concat{
-  background-image : url("images/nui.PNG");
-/*   img src="images/nui.PNG"; */
+/*   background-image : url("images/nui.PNG"); */
+  img src="images/nui.PNG";
 }
 button1{
   width: 200px;
