@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CANVAS合成</title>
-  <link rel="stylesheet" href="style.css">
+  <href="style.css">
 </head>
 <body>
 
@@ -18,7 +18,7 @@
 <!--     <div><img src="icon/plus-solid.svg" width="32" height="32"></div> -->
 
     <!-- 合成するcanvasその2 -->
-    <button type="button1" id="btn-concat"><canvas id="image2" width="150" height="150"></canvas></button>
+    <button type="button1" id="btn-concat"><canvas id="images/body01.PNG" width="150" height="150"></canvas></button>
 <!--     <p><button type="button" id="btn-concat"><img src="images/body01.PNG" width="100" height="100"></button></p> -->
   </div>
 
@@ -67,15 +67,15 @@ function drawImage1(){
 /**
  * [onload] テキスト「うな重」を描画
  */
-function drawImage2(){
-   const Body1 = new Image();
-  Unaju.src = "images/body01.PNG";
-  Unaju.onload = () =>{
-    const canvas = document.querySelector("#image2");
-    const ctx = canvas.getContext("2d");
-    ctx.drawImage(Body1, 0, 0, canvas.width, canvas.height);
-  }
-}
+// function drawImage2(){
+//    const Body1 = new Image();
+//   Unaju.src = "images/body01.PNG";
+//   Unaju.onload = () =>{
+//     const canvas = document.querySelector("#image2");
+//     const ctx = canvas.getContext("2d");
+//     ctx.drawImage(Body1, 0, 0, canvas.width, canvas.height);
+//   }
+// }
 
 /**
  * Canvas合成
@@ -127,4 +127,4 @@ function getImagefromCanvas(id){
 
 
 <!-- 参考ページ<https://blog.katsubemakito.net/html5/canvas-concat> -->
-<!-- type="text/css" media="all" -->
+<!-- link rel="stylesheet" type="text/css" media="all" -->
