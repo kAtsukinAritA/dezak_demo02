@@ -10,15 +10,15 @@
 <section id="contents">
   <div class="flex-container">
     <!-- 合成するcanvasその1 -->
-    <canvas id="images/nui.PNG" width="400" height="400"></canvas>
+    <canvas id="images/nui.PNG" width="200" height="200"></canvas>
     <div><img src="icon/plus-solid.svg" width="32" height="32"></div>
 
     <!-- 合成するcanvasその2 -->
-    <canvas id="images/body01.PNG" width="400" height="400"></canvas>
+    <canvas id="images/body01.PNG" width="200" height="200"></canvas>
     <p><button type="button" id="btn-concat"><img src="icon/equals-solid.svg" width="32" height="32"></button></p>
 
     <!-- 合成結果用のcanvas -->
-    <canvas id="concat" width="400" height="400"></canvas>
+    <canvas id="concat" width="200" height="200"></canvas>
   </div>
 
   <!-- 消しゴム -->
@@ -57,7 +57,7 @@ function drawImage1(){
   const Nui = new Image();
   Unaju.src = "images/nui.PNG";
   Unaju.onload = () =>{
-    const canvas = document.querySelector("#images/nui.PNG");
+    const canvas = document.querySelector("#image1");
     const ctx = canvas.getContext("2d");
     ctx.drawImage(Nui, 0, 0, canvas.width, canvas.height);
   }
@@ -68,9 +68,9 @@ function drawImage1(){
  */
 function drawImage2(){
    const Body1 = new Image();
-  Unaju.src = "images/Body01.PNG";
+  Unaju.src = "images/body01.PNG";
   Unaju.onload = () =>{
-    const canvas = document.querySelector("#image2");
+    const canvas = document.querySelector("#images/body01.PNG");
     const ctx = canvas.getContext("2d");
     ctx.drawImage(Body1, 0, 0, canvas.width, canvas.height);
   }
