@@ -12,6 +12,7 @@
 
     <!-- 合成結果用のcanvas -->
     <canvas id="concat" width="200" height="200"></canvas>
+
     
     <!-- 合成するcanvasその1 -->
 <!--     <canvas id="image1" width="150" height="150"></canvas> -->
@@ -77,20 +78,17 @@ function drawImage2(){
     ctx.drawImage(Body1, 0, 0, canvas.width, canvas.height);
   }
 }
+  
 
-//   キャンパス背景
-  function concat(){
-    const background = new Image();
+  
+      //   キャンパス背景
+    var canvas = document.getElementByld("concat");
+    var ctx = canvas.getContext("2d");
+    var background = new Image();
   background.src = "images/nui.PNG";
-  background.onload = () =>{
-    const canvas = document.querySelector("#image1");
-    const ctx = canvas.getContext("2d");
-    ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+  background.onload = function() {
+    ctx.drawImage(background, 0, 0, canvas_width, background.height* canvas_width / background.width);
   }
-}
-  
-  
-  
   
   
 /**
