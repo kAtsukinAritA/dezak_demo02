@@ -2,53 +2,43 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>デザ研デモサイト2</title>
+    <title>CANVAS合成</title>
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
   </head>
 
 
   <body>
-    <canvas id= "#concat" width="400" height="400"></canvas>
-    <img id="images" src="images/nui.PNG" width="400" height="400" canvas id= "#concat">
-    
-    
-    
-    
-    
-    <img id="images" onclick="slideshow1()" src="images/body01.PNG" wight="250" height="250">
-    <canvas id="images/body01.PNG" width="400" height="400"></canvas>
-    <img id="images" onclick="slideshow2()" src="images/leg01.PNG" wight="250" height="250">
-      
+
+    <h1>CANVAS合成</h1>
+
+     background-image : url("images/nui.PNG" width="400" height="400");
+
       <section id="contents">
         <div class="flex-container">
-          
-<!--           <canvas id="images/nui.PNG"></canvas> -->
-          
-           <canvas id="images/nui.PNG" width="400" height="400"></canvas>
           <!-- 合成するcanvasその1 -->
           <canvas id="images/body01.PNG" width="400" height="400"></canvas>
-<!--           <div><img src="icon/plus-solid.svg" width="32" height="32"></div> -->
+          <div><img src="icon/plus-solid.svg" width="32" height="32"></div>
 
           <!-- 合成するcanvasその2 -->
           <canvas id="images/leg01.PNG" width="400" height="400"></canvas>
-<!--           <p><button type="button" id="btn-concat"><img src="icon/equals-solid.svg" width="32" height="32"></button></p> -->
+          <p><button type="button" id="btn-concat"><img src="icon/equals-solid.svg" width="32" height="32"></button></p>
 
           <!-- 合成結果用のcanvas -->
-<!--           <canvas id="concat" width="400" height="400"></canvas> -->
+          <canvas id="concat" width="400" height="400"></canvas>
         </div>
 
         <!-- 消しゴム -->
         <p id="eraser"><button type="button" id="btn-eraser"><img src="icon/eraser-solid.svg" width="32" height="32"></button></p>
       </section>
 
-     <ul>
-<!--         <li>「＝」ボタンをクリックすると2つのcanvasを合成します</li> -->
+      <ul>
+        <li>「＝」ボタンをクリックすると2つのcanvasを合成します</li>
         <li>「<img src="icon/eraser-solid.svg" width="18" height="18">」ボタンをクリックすると合成結果をクリアします</li>
       </ul>
 
 
       <script>
-          window.onload = () => {
+        window.onload = () => {
           // #image1に画像を描画
           drawImage1();
 
@@ -56,53 +46,9 @@
           drawImage2();
 
           // 「+」ボタンを押したら合成
-//           document.querySelector("images/body01.PNG").addEventListener("click", ()=>{
-//             concatCanvas("#concat", ["images/nui.PNG", "images/body01.PNG"]);
-            
-            
-            var pics_src = new Array("images/body01.PNG","images/leg01.PNG");
-            var num = 0;
-        
-            function slideshow1(){
-            var pics_src = document.querySelector(canvas id = "images/body01.PNG").addEventListener("click", ()=>{
-            concatCanvas("#concat", [canvas id ="images/nui.PNG", canvas id ="images/body01.PNG"]);
-            });
-            
-            if (num == 1){
-              num - 0;
-            }
-            else{
-              num ++;
-            }
-            document.getElementById("images").src=pics_src[num];
-          }
-          
-           
-           function slideshow2(){  
-             var pics_src =document.querySelector("images/leg01.PNG").addEventListener("click", ()=>{
-            concatCanvas("#concat", ["images/nui.PNG", "images/leg01.PNG"]);
-            });
-            var num = 0;
-            if (num == 1){
-              num - 0;
-            }
-             else{
-              num ++;
-            }
-            document.getElementById("images").src=pics_src[num];
-          }
-          
-          
-//           function slideshow1(){
-//             document.querySelector("images/body01.PNG").addEventListener("click", ()=>{
-//             concatCanvas("#concat", ["images/nui.PNG", "images/body01.PNG"]);
-//               
-//             if (num == 1){
-//               num - 0;
-//             }
-//             document.getElementById("images").src=pics_src[num];
-//           }
-          
+          document.querySelector("#btn-concat").addEventListener("click", ()=>{
+            concatCanvas("#concat", ["images/body01.PNG", "images/leg01.PNG"]);
+          });
 
           // 「消しゴム」ボタンを押したらクリア
           document.querySelector("#btn-eraser").addEventListener("click", ()=>{
@@ -116,9 +62,9 @@
          */
         function drawImage1(){
           const Unaju = new Image();
-          Unaju.src = "images/body01.PNG";
+          Unaju.src = "images/leg01.PNG";
           Unaju.onload = () =>{
-            const canvas = document.querySelector("images/body01.PNG");
+            const canvas = document.querySelector("#images/body01.PNG");
             const ctx = canvas.getContext("2d");
             ctx.drawImage(Unaju, 0, 0, canvas.width, canvas.height);
           }
@@ -129,7 +75,7 @@
          */
         function drawImage2(){
         const Unaju = new Image();
-        Unaju.src = "images/leg01.PNG";
+        Unaju.src = "images/body01.PNG";
         Unaju.onload = () =>{
           const canvas = document.querySelector("images/leg01.PNG");
           const ctx = canvas.getContext("2d");
@@ -149,7 +95,7 @@
 
           for(let i=0; i<asset.length; i++){
             const "images/body01.PNG" = await getImagefromCanvas(asset[i]);
-            ctx.drawImage("images/nui.PNG", 0, 0, canvas.width, canvas.height);
+            ctx.drawImage("images/body01.PNG", 0, 0, canvas.width, canvas.height);
           }
         }
 
@@ -185,4 +131,4 @@
 </html>
 
 
-<!-- 参考ページ<https://blog.katsubemakito.net/html5/canvas-concat> -->
+//  参考ページ<https://blog.katsubemakito.net/html5/canvas-concat>
