@@ -78,6 +78,21 @@ function drawImage2(){
   }
 }
 
+//   キャンパス背景
+  function concat(){
+    const background = new Image();
+  background.src = "images/nui.PNG";
+  background.onload = () =>{
+    const canvas = document.querySelector("#image1");
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+  }
+}
+  
+  
+  
+  
+  
 /**
  * Canvas合成
  *
