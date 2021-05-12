@@ -89,8 +89,8 @@ function drawImage2(){
   const ctx = canvas.getContext("2d");
 
   for(let i=0; i<asset.length; i++){
-    const image1 = await getImagefromCanvas(asset[i]);
-    ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
+    const image2 = await getImagefromCanvas(asset[i]);
+    ctx.drawImage(image2, 0, 0, canvas.width, canvas.height);
   }
 }
 
