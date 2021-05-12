@@ -2,9 +2,9 @@ canvas{
   border: 1px solid gray;
   margin: 0px 10px 0px 10px;
 }
-/* concat{ */
-/*   background-image : url("images/nui.PNG"); */
-/* } */
+concat{
+  background-image : url("images/nui.PNG");
+}
 button1{
   width: 200px;
   height: 200px;
