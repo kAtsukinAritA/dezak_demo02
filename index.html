@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CANVAS合成</title>
-  <href="style.css" img id="images">
+  <href="style.css">
 </head>
 <body>
 
@@ -14,7 +14,7 @@
     <canvas id="concat" width="200" height="200"></canvas>
     
     <!-- 合成するcanvasその1 -->
-    <canvas id="images/nui.PNG" width="150" height="150"></canvas>
+    <canvas id="image1" width="150" height="150"></canvas>
 <!--     <div><img src="icon/plus-solid.svg" width="32" height="32"></div> -->
 
     <!-- 合成するcanvasその2 -->
@@ -54,15 +54,16 @@ window.onload = () => {
 /**
  * [onload] うな重の画像を描画
  */
-// function drawImage1(){
-//   const Nui = new Image();
-//   Unaju.src = "images/nui.PNG";
-//   Unaju.onload = () =>{
-//     const canvas = document.querySelector("#image1");
-//     const ctx = canvas.getContext("2d");
-//     ctx.drawImage(Nui, 0, 0, canvas.width, canvas.height);
-//   }
-// }
+  img id="images"
+function drawImage1(){
+  const Nui = new Image();
+  Unaju.src = "images/nui.PNG";
+  Unaju.onload = () =>{
+    const canvas = document.querySelector("#image1");
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(Nui, 0, 0, canvas.width, canvas.height);
+  }
+}
 
 /**
  * [onload] テキスト「うな重」を描画
