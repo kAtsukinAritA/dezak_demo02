@@ -14,7 +14,7 @@
     <canvas id="concat" width="200" height="200"></canvas>
     
     <!-- 合成するcanvasその1 -->
-    <canvas id="image1" width="150" height="150"></canvas>
+<!--     <canvas id="image1" width="150" height="150"></canvas> -->
 <!--     <div><img src="icon/plus-solid.svg" width="32" height="32"></div> -->
 
     <!-- 合成するcanvasその2 -->
@@ -41,7 +41,7 @@ window.onload = () => {
 
   // 「+」ボタンを押したら合成
   document.querySelector("#btn-concat").addEventListener("click", ()=>{
-    concatCanvas("#concat", ["#image1", "#image2"]);
+    concatCanvas("#concat", ["#image2"]);
   });
 
   // 「消しゴム」ボタンを押したらクリア
@@ -54,15 +54,15 @@ window.onload = () => {
 /**
  * [onload] うな重の画像を描画
  */
-function drawImage1(){
-  const Nui = new Image();
-  Nui.src = "images/nui.PNG";
-  Nui.onload = () =>{
-    const canvas = document.querySelector("#image1");
-    const ctx = canvas.getContext("2d");
-    ctx.drawImage(Nui, 0, 0, canvas.width, canvas.height);
-  }
-}
+// function drawImage1(){
+//   const Nui = new Image();
+//   Nui.src = "images/nui.PNG";
+//   Nui.onload = () =>{
+//     const canvas = document.querySelector("#image1");
+//     const ctx = canvas.getContext("2d");
+//     ctx.drawImage(Nui, 0, 0, canvas.width, canvas.height);
+//   }
+// }
 
 /**
  * [onload] テキスト「うな重」を描画
