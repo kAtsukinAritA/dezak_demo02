@@ -3,7 +3,7 @@ canvas{
   margin: 0px 10px 0px 10px;
 }
       //   キャンパス背景
-canvas id="concat"{
+#concat{
     var ctx = canvas.getContext("2d");
   background.src = "images/nui.PNG";
   canvas_width=200;
