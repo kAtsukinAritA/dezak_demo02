@@ -4,7 +4,7 @@ canvas{
 }
       //   キャンパス背景
 #concat{
-  background-image : "images/nui.PNG";
+  background-image : url("images/nui.PNG");
     background-size: width=200, height=200;
 /*     var ctx = canvas.getContext("2d"); */
 /*   background.src = "images/nui.PNG"; */
