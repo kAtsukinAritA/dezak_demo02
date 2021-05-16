@@ -6,6 +6,8 @@ canvas{
 concat{
     var ctx = canvas.getContext("2d");
   background.src = "images/nui.PNG";
+  canvas_width=200;
+  canvas_height=200;
   background.onload = function() {
     ctx.drawImage(background, 0, 0, canvas_width, background.height* canvas_width / background.width);
   }
