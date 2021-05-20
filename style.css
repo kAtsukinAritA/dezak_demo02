@@ -1,11 +1,20 @@
 canvas{
-  border: 1px white;
+  border: 1px solid gray;
   margin: 0px 10px 0px 10px;
 }
       //   キャンパス背景
 #concat{
-  background-image : url("images/nui.PNG");
-    background-size: width=200, height=200;
+var canvas = document.getElementById("images/nui.PNG");
+var ctx = canvas.getContext("2d");
+//白でぬりつぶす
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+  
+  
+/*   background-image : url("images/nui.PNG"); */
+/*     background-size: width=200, height=200; */
+  
+ 
 /*     var ctx = canvas.getContext("2d"); */
 /*   background.src = "images/nui.PNG"; */
 /*   canvas_width=200; */
