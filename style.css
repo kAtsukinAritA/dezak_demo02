@@ -4,7 +4,7 @@ canvas{
 }
       //   キャンパス背景
 #concat{
-var canvas = document.getElementById("images/nui.PNG");
+var concat = document.getElementById("images/nui.PNG");
 var ctx = canvas.getContext("2d");
 //白でぬりつぶす
 ctx.fillStyle = "white";
